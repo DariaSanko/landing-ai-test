@@ -146,10 +146,12 @@ body {
   object-position: center 46%;
   transform: scale(var(--watermark-scale));
   transform-origin: center center;
-  opacity: 0.48;
-  filter: drop-shadow(-2px 2px 22px rgba(95, 0, 210, 0.52))
-    drop-shadow(2px 0 18px rgba(77, 163, 255, 0.4))
-    drop-shadow(0 0 36px rgba(102, 36, 255, 0.22));
+
+  /* PNG already contains the original Figma glow */
+  opacity: 1;
+
+  /* remove artificial Cursor glow */
+  filter: none;
 }
 
 .card {
@@ -409,12 +411,7 @@ body {
     --watermark-scale: 1.04;
   }
 
-  .approach__watermark-img {
-    opacity: 0.44;
-    filter: drop-shadow(-2px 2px 16px rgba(95, 0, 210, 0.45))
-      drop-shadow(2px 0 14px rgba(77, 163, 255, 0.35))
-      drop-shadow(0 0 28px rgba(102, 36, 255, 0.18));
-  }
+ 
 }
 
 @media (max-width: 480px) {

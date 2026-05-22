@@ -179,14 +179,9 @@ body {
   opacity: 0.3;
 }
 
-.card__glow--purple {
-  background: rgba(102, 36, 255, 0.1);
-  filter: blur(72px);
-}
-
+.card__glow--purple,
 .card__glow--blue {
-  background: rgba(77, 163, 255, 0.05);
-  filter: blur(48px);
+  display: none;
 }
 
 .card--wide:first-child .card__glow--purple {
